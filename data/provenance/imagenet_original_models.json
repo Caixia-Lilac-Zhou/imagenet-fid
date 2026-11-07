@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-06",
+  "scope": "original_47_label_imagenet_audit",
+  "evidence": {
+    "author_confirmation": "The authors confirm using the standard configurations from the original papers' GitHub repositories for generated images. MeanFlow specifically uses the AlphaFlow repository. pMF uses the official PyTorch implementation on the torch branch.",
+    "upstream_verification": "Repository, recipe and model-identifier links were checked against official upstream sources. Recipe summaries describe the inspected upstream documentation, not recovered per-run launch logs.",
+    "historical_fields_not_recovered": [
+      "repository_commit",
+      "checkpoint_sha256",
+      "generated_pool_sha256",
+      "generation_seed",
+      "complete_launch_command",
+      "all_preprocessing_overrides"
+    ],
+    "guidance_scope": "A model label may have CFG and no-CFG columns. Guided upstream examples do not establish the complete no-CFG launch command. Model labels, pools and families are different counting units.",
+    "sampling_scope": "The historical audit uses 50K class-balanced generated images as described in the paper. Upstream recipes are model-setting sources; their current label-allocation defaults are not evidence of historical class balance.",
+    "excluded_studies": "The separate eight-family and CIFAR-10 registries retain their own provenance; they are not merged into these 47 labels."
+  },
+  "families": [
+    {
+      "family": "AlphaFlow",
+      "repository_url": "https://github.com/snap-research/alphaflow",
+      "configuration_url": "https://github.com/snap-research/alphaflow/blob/main/scripts/evaluate.sh",
+      "entry_point": "scripts/generate.py",
+      "upstream_recipe_summary": "Use the checkpoint and 1/2-NFE command matching the label. The XL CFG two-step recipe uses a custom time grid; XL+ also enables consistency sampling.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "AlphaFlow-B-2-1NFE",
+          "upstream_identifier": "alphaflow-B-2.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-B-2-2NFE",
+          "upstream_identifier": "alphaflow-B-2.pt; 2 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-B-2-cfg-1NFE",
+          "upstream_identifier": "alphaflow-B-2-cfg.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-B-2-cfg-2NFE",
+          "upstream_identifier": "alphaflow-B-2-cfg.pt; 2 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-XL-2-cfg-1NFE",
+          "upstream_identifier": "alphaflow-XL-2-cfg.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-XL-2-cfg-2NFE",
+          "upstream_identifier": "alphaflow-XL-2-cfg.pt; 2 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-XL-2-plus-cfg-1NFE",
+          "upstream_identifier": "alphaflow-XL-2-plus-cfg.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "AlphaFlow-XL-2-plus-cfg-2NFE",
+          "upstream_identifier": "alphaflow-XL-2-plus-cfg.pt; 2 NFE"
+        }
+      ]
+    },
+    {
+      "family": "BAR",
+      "repository_url": "https://github.com/amazon-far/BAR",
+      "configuration_url": "https://github.com/amazon-far/BAR/blob/main/README.md",
+      "entry_point": "sample_imagenet.py",
+      "upstream_recipe_summary": "Use the matching configs/generator YAML and generator/tokenizer pair. Published guided examples use scales B/4=9.6, B/2=5.5, B=5.0, L=5.3; temperature and bit-allocation settings also differ.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "BAR-B",
+          "upstream_identifier": "bar_b.yaml"
+        },
+        {
+          "audit_model_id": "BAR-B-2",
+          "upstream_identifier": "bar_b_patch2.yaml"
+        },
+        {
+          "audit_model_id": "BAR-B-4",
+          "upstream_identifier": "bar_b_patch4.yaml"
+        },
+        {
+          "audit_model_id": "BAR-L",
+          "upstream_identifier": "bar_l.yaml"
+        }
+      ]
+    },
+    {
+      "family": "DiT",
+      "repository_url": "https://github.com/facebookresearch/DiT",
+      "configuration_url": "https://github.com/facebookresearch/DiT/blob/main/README.md",
+      "entry_point": "sample_ddp.py",
+      "upstream_recipe_summary": "ImageNet-256 DiT-XL/2 sampling with the official checkpoint and 50K evaluation entry point.",
+      "notes": "An upstream architecture/checkpoint name is not a recovered checksum for the historical pool.",
+      "models": [
+        {
+          "audit_model_id": "DiT-XL-2",
+          "upstream_identifier": "DiT-XL/2"
+        }
+      ]
+    },
+    {
+      "family": "FlowAR",
+      "repository_url": "https://github.com/OliverRensu/FlowAR",
+      "configuration_url": "https://github.com/OliverRensu/FlowAR/blob/main/README.md",
+      "entry_point": "eval.py",
+      "upstream_recipe_summary": "S: 25 flow steps, CFG 4.3, guidance 0.9; L: 25 steps, CFG 2.4, guidance 0.9; H: 50 steps, CFG 2.4, guidance 0.7. Use each model's DiffLoss dimensions.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "FlowAR-S",
+          "upstream_identifier": "flowar_small; FlowAR-S.pth"
+        },
+        {
+          "audit_model_id": "FlowAR-L",
+          "upstream_identifier": "flowar_large; FlowAR-L.pth"
+        },
+        {
+          "audit_model_id": "FlowAR-H",
+          "upstream_identifier": "flowar_huge; FlowAR-H.pth"
+        }
+      ]
+    },
+    {
+      "family": "JiT",
+      "repository_url": "https://github.com/LTH14/JiT",
+      "configuration_url": "https://github.com/LTH14/JiT/blob/main/README.md",
+      "entry_point": "main_jit.py",
+      "upstream_recipe_summary": "ImageNet-256 evaluation recipes use B/16 CFG 3.0, L/16 CFG 2.4, H/16 CFG 2.2 and guidance interval [0.1, 1.0]. Use Evaluation, not the online-training example.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "JiT-B-16",
+          "upstream_identifier": "JiT-B/16"
+        },
+        {
+          "audit_model_id": "JiT-L-16",
+          "upstream_identifier": "JiT-L/16"
+        },
+        {
+          "audit_model_id": "JiT-H-16",
+          "upstream_identifier": "JiT-H/16"
+        }
+      ]
+    },
+    {
+      "family": "LlamaGen",
+      "repository_url": "https://github.com/FoundationVision/LlamaGen",
+      "configuration_url": "https://github.com/FoundationVision/LlamaGen/blob/main/GETTING_STARTED.md",
+      "entry_point": "scripts/autoregressive/sample_c2i.sh",
+      "upstream_recipe_summary": "Use the class-conditional recipe and matching B/XXL/3B checkpoint. The guide distinguishes native generation size from 256 evaluation size; XXL and 3B use the FSDP loading option.",
+      "notes": "Checkpoint names are from the official model zoo, not recovered archive hashes. Do not describe every model as generating natively at 256 pixels.",
+      "models": [
+        {
+          "audit_model_id": "LlamaGen-B-256",
+          "upstream_identifier": "GPT-B; c2i_B_256.pt"
+        },
+        {
+          "audit_model_id": "LlamaGen-B-384",
+          "upstream_identifier": "GPT-B; c2i_B_384.pt"
+        },
+        {
+          "audit_model_id": "LlamaGen-XXL",
+          "upstream_identifier": "GPT-XXL; c2i_XXL_384.pt"
+        },
+        {
+          "audit_model_id": "LlamaGen-3B",
+          "upstream_identifier": "GPT-3B; c2i_3B_384.pt"
+        }
+      ]
+    },
+    {
+      "family": "MAR",
+      "repository_url": "https://github.com/LTH14/mar",
+      "configuration_url": "https://github.com/LTH14/mar/blob/main/README.md",
+      "entry_point": "main_mar.py",
+      "upstream_recipe_summary": "B/L/H use CFG 2.9/3.0/3.2, respectively; 256 autoregressive iterations, 100 diffusion steps, linear guidance schedule and temperature 1.0. DiffLoss dimensions differ by size.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "MAR-B",
+          "upstream_identifier": "mar_base"
+        },
+        {
+          "audit_model_id": "MAR-L",
+          "upstream_identifier": "mar_large"
+        },
+        {
+          "audit_model_id": "MAR-H",
+          "upstream_identifier": "mar_huge"
+        }
+      ]
+    },
+    {
+      "family": "MeanFlow",
+      "repository_url": "https://github.com/snap-research/alphaflow",
+      "configuration_url": "https://github.com/snap-research/alphaflow/blob/main/scripts/evaluate.sh",
+      "entry_point": "scripts/generate.py",
+      "upstream_recipe_summary": "Use the meanflow checkpoint entries and corresponding 1/2-NFE commands in AlphaFlow's evaluation script, not a separate MeanFlow implementation.",
+      "notes": "Implementation source specifically confirmed by the authors. Cite MeanFlow for the method and AlphaFlow for this implementation/checkpoint source.",
+      "models": [
+        {
+          "audit_model_id": "MeanFlow-B-2-1NFE",
+          "upstream_identifier": "meanflow-B-2.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "MeanFlow-B-2-2NFE",
+          "upstream_identifier": "meanflow-B-2.pt; 2 NFE"
+        },
+        {
+          "audit_model_id": "MeanFlow-B-2-cfg-1NFE",
+          "upstream_identifier": "meanflow-B-2-cfg.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "MeanFlow-B-2-cfg-2NFE",
+          "upstream_identifier": "meanflow-B-2-cfg.pt; 2 NFE"
+        },
+        {
+          "audit_model_id": "MeanFlow-XL-2-cfg-1NFE",
+          "upstream_identifier": "meanflow-XL-2-cfg.pt; 1 NFE"
+        },
+        {
+          "audit_model_id": "MeanFlow-XL-2-cfg-2NFE",
+          "upstream_identifier": "meanflow-XL-2-cfg.pt; 2 NFE"
+        }
+      ]
+    },
+    {
+      "family": "RAE-DDT",
+      "repository_url": "https://github.com/bytetriper/RAE",
+      "configuration_url": "https://github.com/bytetriper/RAE/tree/main/configs/stage2/sampling/ImageNet256",
+      "entry_point": "src/sample_ddp.py",
+      "upstream_recipe_summary": "The ImageNet256 directory provides DiTDHXL-DINOv2-B.yaml and its _AG autoguidance variant. The latter specifies 50 Euler steps and autoguidance scale 1.42.",
+      "notes": "List both published recipes; do not infer the exact historical YAML or guidance mechanism from the aggregate CFG column alone.",
+      "models": [
+        {
+          "audit_model_id": "RAE-DDT",
+          "upstream_identifier": "DiTDH-XL with DINOv2-B RAE"
+        }
+      ]
+    },
+    {
+      "family": "REPA",
+      "repository_url": "https://github.com/sihyun-yu/REPA",
+      "configuration_url": "https://github.com/sihyun-yu/REPA/blob/main/README.md",
+      "entry_point": "generate.py",
+      "upstream_recipe_summary": "Published SiT-XL/2 evaluation: linear path, SDE, 250 steps, CFG 1.8, upper guidance boundary 0.7; released final checkpoint trained for 4M iterations.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "REPA-XL-2",
+          "upstream_identifier": "SiT-XL/2 trained with REPA"
+        }
+      ]
+    },
+    {
+      "family": "REPA-E",
+      "repository_url": "https://github.com/End2End-Diffusion/REPA-E",
+      "configuration_url": "https://github.com/End2End-Diffusion/REPA-E/blob/main/README.md",
+      "entry_point": "generate.py",
+      "upstream_recipe_summary": "Use the published generation/evaluation recipe with its tokenizer and checkpoint variant. The model zoo includes joint tuning and frozen E2E-VAE variants.",
+      "notes": "The separately recorded eight-family study uses an author-released 50K archive; that record is not retroactively assigned to the original pool.",
+      "models": [
+        {
+          "audit_model_id": "REPA-E",
+          "upstream_identifier": "REPA-E / E2E-VAE release; historical variant not pinned"
+        }
+      ]
+    },
+    {
+      "family": "SiT",
+      "repository_url": "https://github.com/willisma/SiT",
+      "configuration_url": "https://github.com/willisma/SiT/blob/main/README.md",
+      "entry_point": "sample_ddp.py",
+      "upstream_recipe_summary": "Use the matching S/B/L/XL architecture and checkpoint. The evaluation example uses ODE; the repository also supports SDE. The historical solver/checkpoint revision is not pinned here.",
+      "notes": "Official code availability does not independently establish the exact checkpoint file used for each historical size.",
+      "models": [
+        {
+          "audit_model_id": "SiT-S-2",
+          "upstream_identifier": "SiT-S/2"
+        },
+        {
+          "audit_model_id": "SiT-B-2",
+          "upstream_identifier": "SiT-B/2"
+        },
+        {
+          "audit_model_id": "SiT-L-2",
+          "upstream_identifier": "SiT-L/2"
+        },
+        {
+          "audit_model_id": "SiT-XL-2",
+          "upstream_identifier": "SiT-XL/2"
+        }
+      ]
+    },
+    {
+      "family": "LightningDiT",
+      "repository_url": "https://github.com/hustvl/LightningDiT",
+      "configuration_url": "https://github.com/hustvl/LightningDiT/tree/main/configs/reproductions",
+      "entry_point": "run_inference.sh",
+      "upstream_recipe_summary": "Both reproduction YAMLs use 250 Euler steps. The 64ep recipe uses CFG 10.0 and interval start 0.10; 800ep uses CFG 6.7 and interval start 0.125.",
+      "notes": "Preserve the VAVAE-* labels as join keys for the original CSV; the generator family name is LightningDiT.",
+      "models": [
+        {
+          "audit_model_id": "VAVAE-64ep",
+          "upstream_identifier": "LightningDiT-XL/1, 64 epochs",
+          "configuration_url": "https://github.com/hustvl/LightningDiT/blob/main/configs/reproductions/lightningdit_xl_vavae_f16d32_64ep_cfg.yaml"
+        },
+        {
+          "audit_model_id": "VAVAE-800ep",
+          "upstream_identifier": "LightningDiT-XL/1, 800 epochs",
+          "configuration_url": "https://github.com/hustvl/LightningDiT/blob/main/configs/reproductions/lightningdit_xl_vavae_f16d32_800ep_cfg.yaml"
+        }
+      ]
+    },
+    {
+      "family": "pMF",
+      "repository_url": "https://github.com/Lyy-iiis/pMF",
+      "branch": "torch",
+      "branch_url": "https://github.com/Lyy-iiis/pMF/tree/torch",
+      "implementation": "PyTorch",
+      "branch_evidence": "author_confirmation",
+      "configuration_url": "https://github.com/Lyy-iiis/pMF/blob/torch/README.md",
+      "entry_point": "evaluate.py evaluate",
+      "upstream_recipe_summary": "Use the official torch-branch GPU evaluation recipes with the corresponding pMF-B/16, pMF-L/16 or pMF-H/16 checkpoint and model-specific guidance settings.",
+      "notes": "The authors confirmed the PyTorch implementation on the torch branch for the audited pMF models. The historical commit, generation seeds and artifact hashes remain unrecorded here. The upstream README requires --save-samples to retain images; no upstream script is executed by this registry.",
+      "models": [
+        {
+          "audit_model_id": "pMF-B-16",
+          "upstream_identifier": "pMF-B/16"
+        },
+        {
+          "audit_model_id": "pMF-L-16",
+          "upstream_identifier": "pMF-L/16"
+        },
+        {
+          "audit_model_id": "pMF-H-16",
+          "upstream_identifier": "pMF-H/16"
+        }
+      ]
+    },
+    {
+      "family": "xAR",
+      "repository_url": "https://github.com/OliverRensu/xAR",
+      "configuration_url": "https://github.com/OliverRensu/xAR/blob/main/README.md",
+      "entry_point": "eval.py",
+      "upstream_recipe_summary": "All use 256 autoregressive iterations. B: 40 diffusion steps and CFG 2.7; L: 50 steps and CFG 2.3; H: 50 steps and CFG 2.2.",
+      "notes": "",
+      "models": [
+        {
+          "audit_model_id": "xAR-B",
+          "upstream_identifier": "xar_base; xAR-B.pth"
+        },
+        {
+          "audit_model_id": "xAR-L",
+          "upstream_identifier": "xar_large; xAR-L.pth"
+        },
+        {
+          "audit_model_id": "xAR-H",
+          "upstream_identifier": "xar_huge; xAR-H.pth"
+        }
+      ]
+    }
+  ]
+}

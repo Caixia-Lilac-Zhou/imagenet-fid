@@ -1,0 +1,9 @@
+model,protocol_a,protocol_b,point_delta_a_minus_b,bootstrap_delta_mean,delta_ci_2.5,delta_ci_97.5,probability_a_lower,replicates
+AFM-XL2-112L-1NFE,conventional_train,validation,-1.367241367,-1.963574527,-2.035562664,-1.882123043,1.000000000,200
+AlphaFlow-XL-2+-2NFE,conventional_train,validation,-1.376617421,-1.975747975,-2.061871445,-1.889932928,1.000000000,200
+BAR-L,conventional_train,validation,-1.423938155,-2.039544203,-2.103741041,-1.971858771,1.000000000,200
+JiT-H-16,conventional_train,validation,-1.127732345,-1.736890273,-1.808263045,-1.673441612,1.000000000,200
+LightningDiT,conventional_train,validation,-1.525924960,-2.136370510,-2.209212330,-2.070798485,1.000000000,200
+MAR-H,conventional_train,validation,-1.358699876,-1.957934178,-2.044896225,-1.870579122,1.000000000,200
+RAE-DDT,conventional_train,validation,-0.994984409,-1.603376530,-1.684298895,-1.534541082,1.000000000,200
+REPA-E,conventional_train,validation,-1.352327037,-1.963494410,-2.036500841,-1.893671342,1.000000000,200

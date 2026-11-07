@@ -1,0 +1,6 @@
+{
+  "name": "BAR-L", "path": "../datasets/generated/BAR-L.npz",
+  "format": "npz", "preprocess": "none", "image_size": 256,
+  "label_mode": "sidecar", "labels_path": "../datasets/generated/BAR-L.labels.npy",
+  "expected_count": 50000, "expected_classes": 1000, "expected_per_class": 50
+}

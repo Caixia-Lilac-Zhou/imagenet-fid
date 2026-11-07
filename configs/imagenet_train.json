@@ -1,0 +1,5 @@
+{
+  "name": "imagenet_train", "path": "../datasets/imagenet/train",
+  "format": "images", "preprocess": "jit_center_crop", "image_size": 256,
+  "label_mode": "parent", "expected_count": 1281167, "expected_classes": 1000
+}

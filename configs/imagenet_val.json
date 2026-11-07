@@ -1,0 +1,6 @@
+{
+  "name": "imagenet_val", "path": "../datasets/imagenet/val",
+  "format": "images", "preprocess": "jit_center_crop", "image_size": 256,
+  "label_mode": "parent", "expected_count": 50000, "expected_classes": 1000,
+  "expected_per_class": 50
+}

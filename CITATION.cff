@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this code or its recorded results."
+type: software
+title: "ImageNet FID is a Pass Check, Not a Finish Line"
+authors:
+  - family-names: Zhao
+    given-names: Qinyu
+    affiliation: The Australian National University
+  - family-names: Zheng
+    given-names: Guangting
+    affiliation: University of Science and Technology of China
+  - family-names: Zhou
+    given-names: Caixia
+    affiliation: Shanghai Maritime University
+license: MIT
+version: 0.1.0
+preferred-citation:
+  type: conference-paper
+  title: "ImageNet FID is a Pass Check, Not a Finish Line"
+  authors:
+    - family-names: Zhao
+      given-names: Qinyu
+    - family-names: Zheng
+      given-names: Guangting
+    - family-names: Zhou
+      given-names: Caixia
+  collection-title: Advances in Neural Information Processing Systems
+  year: 2026
+  url: https://neurips.cc/virtual/2026/poster/140042

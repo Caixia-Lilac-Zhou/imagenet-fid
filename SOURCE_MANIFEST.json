@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "file": "evaluation/fid_core.py",
+      "origin": "rebuttal/fid_core.py",
+      "source_sha256": "a43fa967d50129799dbf3cf68756816ba48d9d1971f6a1dd8e4b6e1c1a36000b"
+    },
+    {
+      "file": "evaluation/extract_inception_features.py",
+      "origin": "rebuttal/extract_inception_features.py",
+      "source_sha256": "5e888dcf3021f6bb168638f27264f6202722cdfb81d2db52e3551fdf990faafb"
+    },
+    {
+      "file": "evaluation/bootstrap_fid_uncertainty.py",
+      "origin": "rebuttal/bootstrap_fid_uncertainty.py",
+      "source_sha256": "89c1c97bfe9b4c8e013a2db3154dd9f5e28ee874ddd678ed34bb16faa8d68aea"
+    },
+    {
+      "file": "evaluation/subsample_fid_stability.py",
+      "origin": "rebuttal/subsample_fid_stability.py",
+      "source_sha256": "996c9347c4801b7b6c9112af4b267a2fc2822fbeb942533a59619c0c8a8ad6bc"
+    },
+    {
+      "file": "evaluation/create_balanced_feature_subset.py",
+      "origin": "rebuttal/create_balanced_feature_subset.py",
+      "source_sha256": "8e0c6adb13fc98b71fd037e4f8ee1c301fc3389050a032e9f700a24b5fd02137"
+    },
+    {
+      "file": "evaluation/combine_feature_bundles.py",
+      "origin": "rebuttal/combine_feature_bundles.py",
+      "source_sha256": "b4ab11d4b32667ed1832d416f68b859d5f2d390c25ccb73bdcfc9dc58ef41e75"
+    },
+    {
+      "file": "evaluation/merge_feature_shards.py",
+      "origin": "rebuttal/merge_feature_shards.py",
+      "source_sha256": "58bdbfaa3b92ddf722b8e584316fd9ff404e3416e478303bea8317696c6af05c"
+    },
+    {
+      "file": "evaluation/extract_backbone_features.py",
+      "origin": "rebuttal/cross_domain/extract_backbone_features.py",
+      "source_sha256": "2b12710499b063e1b1e193224ce1766677573e9f9f90dea95dccb832a15eb155"
+    },
+    {
+      "file": "tests/test_fid_core.py",
+      "origin": "rebuttal/test_fid_core.py",
+      "source_sha256": "20f6788f93437339d0d0292372dc720bdfb064e7ec1ebd9ed44977cb8906331a"
+    },
+    {
+      "file": "tests/test_bootstrap_fid_uncertainty.py",
+      "origin": "rebuttal/test_bootstrap_fid_uncertainty.py",
+      "source_sha256": "d4e171366ca1cc56559d0ceb8779fa115576601fa708bf4ac80fa00e09003bc6"
+    },
+    {
+      "file": "tests/test_subsample_fid_stability.py",
+      "origin": "rebuttal/test_subsample_fid_stability.py",
+      "source_sha256": "1cfbd76458a6af2ce275b92da1890592c6b7409d99488de0c321c6db6feebd7e"
+    },
+    {
+      "file": "tests/test_feature_pipeline.py",
+      "origin": "rebuttal/test_feature_pipeline.py",
+      "source_sha256": "fc35cf2ce2e580b33bbffd1532c326e3874304a1be252a52380dd9630064460e"
+    },
+    {
+      "file": "analysis/paper_figures.py",
+      "origin": "camera_ready/make_figures.py",
+      "source_sha256": "35a0e7eb5688ed0d33a894f7cdc1537ac325b1f6a3311978c14bf1f60c01f0de"
+    },
+    {
+      "file": "data/original/fid_table_results.csv",
+      "origin": "camera_ready/FID_results/fid_table_results.csv",
+      "source_sha256": "56f0463bc2eb37c6377960b5a99537bb7d69fd9ca2334ae65fda18ec28b081d6"
+    },
+    {
+      "file": "data/original/fid_table_results_clip-vit-b-16.csv",
+      "origin": "camera_ready/FID_results/fid_table_results_clip-vit-b-16.csv",
+      "source_sha256": "acf8ac3157d1d111fe176e37e3e2cd0b2daa05fd6621f262c26f1d5ce25ae5aa"
+    },
+    {
+      "file": "data/original/fid_table_results_dinov2-vit-b-14.csv",
+      "origin": "camera_ready/FID_results/fid_table_results_dinov2-vit-b-14.csv",
+      "source_sha256": "c1fc42c4b7ae9af349d1827aeb7495f5543475e7d8c271805fe6198617189230"
+    },
+    {
+      "file": "data/original/fid_table_results_inception-v3-compat.csv",
+      "origin": "camera_ready/FID_results/fid_table_results_inception-v3-compat.csv",
+      "source_sha256": "91f505639170948f79436566f63d46486c879f41a7b524799f09bd4230ca0364"
+    },
+    {
+      "file": "data/original/fid_table_results_vgg16.csv",
+      "origin": "camera_ready/FID_results/fid_table_results_vgg16.csv",
+      "source_sha256": "48dbdd90965c02314992d598c2e2ab5f98b4c5b7d65b017003516f548a4e92e7"
+    },
+    {
+      "file": "data/imagenet/bootstrap/bootstrap_convergence.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/bootstrap/bootstrap_convergence.csv",
+      "source_sha256": "a0acd2e99abfc62914e990566dd3c5aa41771a1c5d066a038ed7f24f84a822d3"
+    },
+    {
+      "file": "data/imagenet/bootstrap/bootstrap_pairwise.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/bootstrap/bootstrap_pairwise.csv",
+      "source_sha256": "7275c66f7c0fff0a690bd7f96b8f3b0ec1731e3c74d3357bb8fcb6c3c69aabe0"
+    },
+    {
+      "file": "data/imagenet/bootstrap/bootstrap_protocol_differences.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/bootstrap/bootstrap_protocol_differences.csv",
+      "source_sha256": "9bf57fd3cb203e08f2713ac0d0371f9d85e8ef42a23bca7ec042e5544708a1a6"
+    },
+    {
+      "file": "data/imagenet/bootstrap/bootstrap_replicates.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/bootstrap/bootstrap_replicates.csv",
+      "source_sha256": "968aa6c5798af1172f5a38abd8a5811c15bf39eb0f5713ce2fcf34903e8c9591"
+    },
+    {
+      "file": "data/imagenet/bootstrap/bootstrap_summary.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/bootstrap/bootstrap_summary.csv",
+      "source_sha256": "17820419a4b14f1f812992ed9ab0b2cd828395e96e2a2faa66b9de85625873fc"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_model_ranks.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_model_ranks.csv",
+      "source_sha256": "f2d3bef070d4f069edff6773c6c8e9033b4e306fd0275b8c8dbd3a52a5b8d97d"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_pairwise.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_pairwise.csv",
+      "source_sha256": "453338c8778cdabaff178eeff52170b9f87ea8ac1c7223c02302fb5426b4321e"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_ranking_summary.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_ranking_summary.csv",
+      "source_sha256": "c564c7c1313385029ca4f72e5ab68987a33d3a5e02063bccc517ceb734902018"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_ranking_trials.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_ranking_trials.csv",
+      "source_sha256": "319ad3496455332e247c298ca59c9f0c00b56720bfbd8f10f0c9cf6e7ce0da5c"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_scores.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_scores.csv",
+      "source_sha256": "5581def89d643718a9e8a645b73590e8c715be10bb3a371978f16d7453304310"
+    },
+    {
+      "file": "data/imagenet/generated_size/subsample_summary.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/generated_size/subsample_summary.csv",
+      "source_sha256": "0c76bafab412338941e19df2c7bcb34464308eea2b5aaead1410d42a2bc04286"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_model_ranks.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_model_ranks.csv",
+      "source_sha256": "c5fe37230b57b76a054b8cdd2318b21ca9942d89b74f44f4cb80175a26bf457b"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_pairwise.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_pairwise.csv",
+      "source_sha256": "03b51db6a3069af6155577022ac76754ddb3a8fdf6b0ba783203b83aace3e4de"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_ranking_summary.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_ranking_summary.csv",
+      "source_sha256": "ed164a02a4c60bf6bd126aa57baa26dcc1b1d5688a7a924152e0d2c0be672ef6"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_ranking_trials.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_ranking_trials.csv",
+      "source_sha256": "22be3a49ab66ff99294538c6e34dde772f823f40aa907a3e2802f45dce012623"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_scores.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_scores.csv",
+      "source_sha256": "3a33a9eff3ee2356683b70a5408ef750857bb35466507b3beba8772c0600bd48"
+    },
+    {
+      "file": "data/imagenet/reference_size/subsample_summary.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/results/reference_size/subsample_summary.csv",
+      "source_sha256": "ebcc66da3a4b4d2addd9761c4d867f142a847f888c5c645929805342271e38fc"
+    },
+    {
+      "file": "data/cifar10/inception/bootstrap_convergence.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap/bootstrap_convergence.csv",
+      "source_sha256": "5e5ea579208bcc3f635cdc9043a3ce31a9e0455698d80bcb610097195b135c9f"
+    },
+    {
+      "file": "data/cifar10/inception/bootstrap_pairwise.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap/bootstrap_pairwise.csv",
+      "source_sha256": "bbb5ebd2c0451a901c2f235d5cf9db727a8f63e8c741e0290f5c3e02d747dfdf"
+    },
+    {
+      "file": "data/cifar10/inception/bootstrap_protocol_differences.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap/bootstrap_protocol_differences.csv",
+      "source_sha256": "a3680611170af0b8b972d32c289326bdbcc890f8531fa75d3fdbc41fdbf1ce95"
+    },
+    {
+      "file": "data/cifar10/inception/bootstrap_replicates.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap/bootstrap_replicates.csv",
+      "source_sha256": "bf22645494cacfd3ee156820c6ca784c1bdc57a8ef4b93301d7960f1885c404a"
+    },
+    {
+      "file": "data/cifar10/inception/bootstrap_summary.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap/bootstrap_summary.csv",
+      "source_sha256": "7069bc4e32ac4cb9d44e7fcad05d725fdf39c35d3954073953ae2776514aaee0"
+    },
+    {
+      "file": "data/cifar10/dinov2/bootstrap_convergence.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_dinov2-vit-b-14/bootstrap_convergence.csv",
+      "source_sha256": "36bac68e1e503c8677c5200697ed5e951e7b44ec6922691b92fa8b21aecce468"
+    },
+    {
+      "file": "data/cifar10/dinov2/bootstrap_pairwise.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_dinov2-vit-b-14/bootstrap_pairwise.csv",
+      "source_sha256": "a8aa59ed0e618acab3790f2c7da004f3d126323415f4b35ba035439498a7b719"
+    },
+    {
+      "file": "data/cifar10/dinov2/bootstrap_protocol_differences.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_dinov2-vit-b-14/bootstrap_protocol_differences.csv",
+      "source_sha256": "87b2dd3004a1cfd95e65d8341c18863b18ad85aa7254d2bbe79a200f515d905b"
+    },
+    {
+      "file": "data/cifar10/dinov2/bootstrap_replicates.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_dinov2-vit-b-14/bootstrap_replicates.csv",
+      "source_sha256": "dc83028b3c47140f61d7e8ee139eb413f5884a4370f0be953505d92b249f93b3"
+    },
+    {
+      "file": "data/cifar10/dinov2/bootstrap_summary.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_dinov2-vit-b-14/bootstrap_summary.csv",
+      "source_sha256": "c038fe653c4fabd2afd3350e97c13d039b0a688eb20e39635bf9ebd748146e82"
+    },
+    {
+      "file": "data/cifar10/clip/bootstrap_convergence.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_clip-vit-b-16/bootstrap_convergence.csv",
+      "source_sha256": "1a3d08e25b821337828bd69ee1b969371aa1fc76ab569f93235040da09705196"
+    },
+    {
+      "file": "data/cifar10/clip/bootstrap_pairwise.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_clip-vit-b-16/bootstrap_pairwise.csv",
+      "source_sha256": "05c694f8119c757fd8f732f82be401aabb3d653c4de6c06cdd9be5a7dcfcc97d"
+    },
+    {
+      "file": "data/cifar10/clip/bootstrap_protocol_differences.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_clip-vit-b-16/bootstrap_protocol_differences.csv",
+      "source_sha256": "edd95f84d0716b13433882a204a49b188cfc7a37e1b57696217e1f1efaf82188"
+    },
+    {
+      "file": "data/cifar10/clip/bootstrap_replicates.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_clip-vit-b-16/bootstrap_replicates.csv",
+      "source_sha256": "c284774c5fe8e57f0603286e28f5985646eab7d26f3ed2a686ebe59a47a89036"
+    },
+    {
+      "file": "data/cifar10/clip/bootstrap_summary.csv",
+      "origin": "rebuttal/results/cifar10/results/bootstrap_clip-vit-b-16/bootstrap_summary.csv",
+      "source_sha256": "ee3c961b1a1ecde3019488c7cd41bf45f23eb95afa5b2b39502e0f2fb69331eb"
+    },
+    {
+      "file": "data/cifar10/aggregate/backbone_agreement.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/backbone_agreement.csv",
+      "source_sha256": "3152473d0053b246dee0f346d9d58d46b43037a48f71e41020870f0179bad540"
+    },
+    {
+      "file": "data/cifar10/aggregate/evaluation_cells.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/evaluation_cells.csv",
+      "source_sha256": "c50b11780d8a58cdab43053602de302136440bab8d5a827a52c9dd03504eaae4"
+    },
+    {
+      "file": "data/cifar10/aggregate/model_protocol_ranges.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/model_protocol_ranges.csv",
+      "source_sha256": "53697dce640e102da13efdca204907f20cce8509e2d250723102d5a7c0053f49"
+    },
+    {
+      "file": "data/cifar10/aggregate/pairwise_reversals.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/pairwise_reversals.csv",
+      "source_sha256": "bdf031c850281d9781d71326797eb03b6531e44521936d1c9b3faddf77495176"
+    },
+    {
+      "file": "data/cifar10/aggregate/protocol_correlations.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/protocol_correlations.csv",
+      "source_sha256": "997ea1a7309fe6e1576b7d291cb3b890e7b6976f6636ef7cf7a9cecefeb66eb5"
+    },
+    {
+      "file": "data/cifar10/aggregate/subsampling_pairwise.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/subsampling_pairwise.csv",
+      "source_sha256": "3ee3e8d7f36caefc92e337efb08c4443a38a9353004e85bc979b934ca698a8af"
+    },
+    {
+      "file": "data/cifar10/aggregate/subsampling_ranking.csv",
+      "origin": "rebuttal/results/cifar10/results/aggregate/subsampling_ranking.csv",
+      "source_sha256": "6c232e335a9db956b13e2ba4914cbe42e5b0b07d05619f178bfdeacadacff040"
+    },
+    {
+      "file": "data/provenance/cifar10_models.json",
+      "origin": "rebuttal/cross_domain/model_registry.json",
+      "source_sha256": "742ede17ebfe9d2ce020325a985f58ac8870d1d60f089b43647b471883e6fc30"
+    },
+    {
+      "file": "data/provenance/imagenet_eight_families.csv",
+      "origin": "rebuttal/results/h100/e1_eight_families_final/provenance_report.csv",
+      "transformation": "Generated-model rows only; private bundle and metadata paths omitted."
+    }
+  ]
+}

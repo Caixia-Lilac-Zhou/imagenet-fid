@@ -1,0 +1,13 @@
+backbone_a,backbone_b,protocol,point_spearman,same_winner,winner_a,winner_b
+CLIP-ViT-B-16,DINOv2-ViT-B-14,test_10k,1.0,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,DINOv2-ViT-B-14,train_10k_seed2026,1.0,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,DINOv2-ViT-B-14,train_10k_seed2027,1.0,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,DINOv2-ViT-B-14,train_full,1.0,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,Inception-V3,test_10k,0.7999999999999999,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,Inception-V3,train_10k_seed2026,0.7999999999999999,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,Inception-V3,train_10k_seed2027,0.7999999999999999,True,Neon-EDM,Neon-EDM
+CLIP-ViT-B-16,Inception-V3,train_full,0.7999999999999999,True,Neon-EDM,Neon-EDM
+DINOv2-ViT-B-14,Inception-V3,test_10k,0.7999999999999999,True,Neon-EDM,Neon-EDM
+DINOv2-ViT-B-14,Inception-V3,train_10k_seed2026,0.7999999999999999,True,Neon-EDM,Neon-EDM
+DINOv2-ViT-B-14,Inception-V3,train_10k_seed2027,0.7999999999999999,True,Neon-EDM,Neon-EDM
+DINOv2-ViT-B-14,Inception-V3,train_full,0.7999999999999999,True,Neon-EDM,Neon-EDM

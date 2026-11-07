@@ -1,0 +1,5 @@
+model,protocol,generated_npz,reference_npz,reference_stats_npz,expected_fd
+BAR-L,conventional_train,../features/BAR-L,,../datasets/stats/openai_train.npz,
+BAR-L,validation,../features/BAR-L,../features/imagenet_val,,
+RAE-DDT,conventional_train,../features/RAE-DDT,,../datasets/stats/openai_train.npz,
+RAE-DDT,validation,../features/RAE-DDT,../features/imagenet_val,,

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "edm",
+      "display_name": "EDM",
+      "family": "diffusion",
+      "repository": "https://github.com/NVlabs/edm.git",
+      "commit": "008a4e5316c8e3bfe61a62f874bddba254295afb",
+      "checkpoint": "https://nvlabs-fi-cdn.nvidia.com/edm/pretrained/edm-cifar10-32x32-cond-vp.pkl",
+      "checkpoint_size_bytes": 223183453,
+      "checkpoint_sha256": "b27385e4f2f8d4d1e2e2c03864c5a9574a0c58ba81eb11625ae6d15c401f4796",
+      "sampler": "EDM Heun, 18 steps, S_churn=0"
+    },
+    {
+      "id": "neon",
+      "display_name": "Neon-EDM",
+      "family": "self-training diffusion",
+      "repository": "https://github.com/VITA-Group/Neon.git",
+      "commit": "754f12ba7cf4f6a1e72827848e09cea9a0bd14ae",
+      "checkpoint": "https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_conditional_CIFAR10.pkl",
+      "checkpoint_size_bytes": 223171918,
+      "checkpoint_sha256": "af95ead9ded2b055806f6a8a22d09698875694f6aaf79f7c53266889f0bb1a40",
+      "sampler": "EDM Heun, 18 steps, S_churn=0"
+    },
+    {
+      "id": "stylegan2",
+      "display_name": "StyleGAN2-ADA",
+      "family": "GAN",
+      "repository": "https://github.com/NVlabs/stylegan2-ada-pytorch.git",
+      "commit": "d72cc7d041b42ec8e806021a205ed9349f87c6a4",
+      "checkpoint": "https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/cifar10.pkl",
+      "checkpoint_size_bytes": 245826205,
+      "checkpoint_sha256": "f8952c74e23da2186d147ad871c48780bd59500ee37c301201081ee8e0cb32f1",
+      "sampler": "truncation_psi=1.0, noise_mode=const"
+    },
+    {
+      "id": "c2ot",
+      "display_name": "C2OT",
+      "family": "conditional flow matching",
+      "repository": "https://github.com/hkchengrex/C2OT.git",
+      "commit": "813c720079869b0e9c509528ecbb2b0b5463d8cd",
+      "checkpoint": "https://huggingface.co/hkchengrex/c2ot-cifar10-c2ot/resolve/a7126f7f09a9f17084157297b047989c535fb330/cifar10_c2ot_ckpt.pth",
+      "checkpoint_size_bytes": 1426326176,
+      "checkpoint_sha256": "eee13ee2fa24e65742000cfa50c088b029e79501a3a888421c663c8634dd0615",
+      "sampler": "Euler, 100 steps"
+    }
+  ]
+}

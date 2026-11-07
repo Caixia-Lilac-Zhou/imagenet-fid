@@ -1,0 +1,6 @@
+{
+  "name": "Neon-EDM", "path": "../datasets/cifar10/generated/Neon-EDM.npz",
+  "format": "npz", "preprocess": "none", "image_size": 32,
+  "label_mode": "auto", "image_key": "images", "label_key": "labels",
+  "expected_count": 10000, "expected_classes": 10, "expected_per_class": 1000
+}
